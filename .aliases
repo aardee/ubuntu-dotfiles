@@ -22,10 +22,13 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ld='ls -l | grep "^d"'
+alias ld='ls -lF | grep --color=never "^d"'
 
 # Make sure aliases can be sudo'ed
 alias sudo="sudo "
+
+# Get week number
+alias week='date +%V'
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
@@ -57,11 +60,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # URL REQUEST shortcuts
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-    alias "$method"="lwp-request -m '$method'"
-done
-
-# One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
