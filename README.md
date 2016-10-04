@@ -7,7 +7,7 @@
 The repository can be cloned wherever you want. The bootstrap script will [git]  pull in the latest version and _overwrite_ the files to your home folder.
 
 ```bash
-git clone --recursive https://github.com/pjan/ubuntu-dotfiles.git && cd ubuntu-dotfiles && source bootstrap.sh
+git clone --recursive https://github.com/aardee/ubuntu-dotfiles.git && cd ubuntu-dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into the local `ubuntu-dotfiles` repository and execute:
